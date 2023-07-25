@@ -8,11 +8,13 @@ const Card = (props) => {
         <h3 className="pokemon-name">{props.name}</h3>
         <div className="number">{convertNumber(props.number)}</div>
       </div>
-      <div className="card=body">
-        <div>
-          <img src={props.image} alt="Bulbasaur" className="pokemon-picture" />
+      <div>
+        <img src={props.image} alt="Bulbasaur" className="pokemon-picture" />
+      </div>
+      <div className="card-body">
+        <div className="pokemon-type">
+          <div>{props.type}</div>
         </div>
-        <div className="pokemon-type">{props.type}</div>
         <div className="pokemon-desc">{props.description}</div>
       </div>
     </div>

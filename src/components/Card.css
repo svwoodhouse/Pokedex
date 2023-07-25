@@ -15,6 +15,7 @@
     font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
+    background-color: rgb(236, 236, 236);
 }
 
 .pokemon-name {
@@ -36,11 +37,21 @@
 }
 
 .pokemon-type {
+    background-color: rgb(73, 167, 73);
     font-size: 1.5rem;
-    color:green;
-    padding-bottom: 0.5rem;
+    color:white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    outline: auto;
+    display: inline-block;
+    padding: 0 2rem 0.5rem 2rem;
+    outline-color: green;
+    margin: 1rem 2rem 1rem 2rem;
+    border-radius: 2rem;
 }
 
 .pokemon-desc {
     padding: 0 1rem 1rem 1rem;
+    font-weight: 500;
 }
