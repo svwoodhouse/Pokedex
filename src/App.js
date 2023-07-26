@@ -1,5 +1,6 @@
 import "./App.css";
 import Card from "./components/Card";
+import { useState, useEffect } from "react";
 import { Bulbasaur, Ivysaur, Venusaur } from "./assets";
 
 function App() {
@@ -29,6 +30,13 @@ function App() {
         "Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
     },
   ];
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    fetch("/api")
+      .then((res) => res.json())
+      .then((data) => setData(data.message));
+  }, []);
+
   return (
     <div className="App">
       <div className="cards">
@@ -44,6 +52,7 @@ function App() {
             />
           );
         })}
+        <div>{data}</div>
       </div>
     </div>
   );
